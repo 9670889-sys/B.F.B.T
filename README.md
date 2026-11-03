@@ -35,8 +35,9 @@ We need to research the different classes, how to program gravity, and how to im
 # Timeline we hope to follow
 
 ![Timeline](https://github.com/9670889-sys/Flappy-Birds/blob/main/images/Timeline-Schedule.png)
+# Class Diagram
 
-
+![Class diagram](https://github.com/9670889-sys/Flappy-Birds/blob/main/images/BirdClassDiagram.jpg)
 
 
 
