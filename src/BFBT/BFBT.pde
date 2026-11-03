@@ -20,10 +20,10 @@ void setup() {
 
 void draw() {
   background(128)
-  backdrop.display
-  p1.display
-  Buttons[0].display
-  coin.display
-  pipe.display
+  backdrop.display;
+  p1.display;
+  Buttons[0].display;
+  coin.display;
+  pipe.display;
 
 }
