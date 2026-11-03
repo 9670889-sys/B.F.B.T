@@ -7,6 +7,7 @@ class Player {
   Player() {
   x = 50;
   y = 50;
+  p1 = loadImage("");
   
   
   }
