@@ -2,12 +2,12 @@
 class Obstacle {
   //Member Variables
   int x,y;
-  PImage p1;
+  PImage im;
   //constructor
   Obstacle() {
     x=100;
     y=100;
-    p1=loadImage("");
+    im=loadImage("");
   }
   //Member Methods
   void display() {
