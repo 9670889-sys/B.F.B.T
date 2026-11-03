@@ -19,7 +19,7 @@ void setup() {
 
 
 void draw() {
-  background(128)
+  background(128);
   backdrop.display;
   p1.display;
   Buttons[0].display;
