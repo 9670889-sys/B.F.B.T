@@ -4,7 +4,7 @@ class Scroller {
   float x, y, w, h;
   
   // Constructor
-  Player() {
+  Scroller() {
   x = 50;
   y = 50;
   im = loadImage("");
