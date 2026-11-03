@@ -2,6 +2,7 @@
 class Item {
   // Member Variables
   float x, y, w, h;
+  im PImage
   
   // Constructor
   Item() {
