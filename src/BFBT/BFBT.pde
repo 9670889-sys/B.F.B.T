@@ -1,7 +1,16 @@
-// Logan Funai
+//Logan Funai| Birds of a Feather, Brawl Together | 10/27/2026 | Computer Programing 1
+Button[] Buttons = new Button[4];
 
-void setup() {}
+float v;
+
+void setup() {
+  size(900,500);
+  Buttons[0] = new Button();
+  Buttons[1] = new Button();
+  Buttons[2] = new Button();
+  Buttons[3] = new Button();
+}
+
 
 
 void draw() {}
-
