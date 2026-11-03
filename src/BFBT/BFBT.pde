@@ -17,10 +17,10 @@ void setup() {
 
 void draw() {
   background(128)
+  scroller.display
   p1.display
   Buttons[0].display
   item.display
   obstacle.display
-  scroller.display
 
 }
