@@ -10,8 +10,8 @@ Button() {
 }
 
 //Member Method
-void display() {}
+void display() {
    fill(200,0,0);
    rect(x,y,50,50);
-
+}
 }
