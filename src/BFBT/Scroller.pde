@@ -2,7 +2,7 @@
 class Scroller {
   // Member Variables
   float x, y, w, h;
-  
+  PImage im;
   // Constructor
   Scroller() {
   x = 50;
