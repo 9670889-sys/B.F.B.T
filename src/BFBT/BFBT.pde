@@ -19,5 +19,8 @@ void draw() {
   background(128)
   p1.display
   Buttons[0].display
+  item.display
+  obstacle.display
+  scroller.display
 
 }
