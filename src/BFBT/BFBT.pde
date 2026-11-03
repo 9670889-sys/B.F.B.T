@@ -1,6 +1,9 @@
 //Logan Funai| Birds of a Feather, Brawl Together | 10/27/2026 | Computer Programing 1
 Button[] Buttons = new Button[4];
 p1 Player;
+backdrop Scroller;
+coin Item;
+pipe Obstacle;
 
 float v;
 
@@ -17,10 +20,10 @@ void setup() {
 
 void draw() {
   background(128)
-  scroller.display
+  backdrop.display
   p1.display
   Buttons[0].display
-  item.display
-  obstacle.display
+  coin.display
+  pipe.display
 
 }
