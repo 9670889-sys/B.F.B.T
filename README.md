@@ -1,5 +1,5 @@
 # Birds of a Feather, Brawl Together
-### Logan Funai, Xavier Probasco, Max Oyewole, and Randy Warner
+### Logan Funai, Xavier Probasco, Max Oyewole, and Xander Warner
 
 ![What it will look like](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB-iXw-QpO0fBwXOPIRxK-ahSCOVpmnRea0Okr2H_ZhA&s=10)
 
