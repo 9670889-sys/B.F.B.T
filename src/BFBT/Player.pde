@@ -2,6 +2,7 @@
 class Player {
   // Member Variables
   float x, y, w, h;
+  PImage p1;
   
   // Constructor
   Player() {
