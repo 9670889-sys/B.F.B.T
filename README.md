@@ -38,7 +38,6 @@ We need to research the different classes, how to program gravity, and how to im
 # Class Diagram
 
 ![Class diagram](https://github.com/9670889-sys/Flappy-Birds/blob/main/images/BirdClassDiagram.jpg)
+# Logic Flow Diagram
 
-
-
-
+![Flow diagram](https://github.com/9670889-sys/Flappy-Birds/blob/main/images/Logic-Diagram.png)
