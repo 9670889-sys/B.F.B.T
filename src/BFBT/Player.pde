@@ -6,7 +6,7 @@ class Player {
   
   // Constructor
   Player() {
-  x = 50;
+  x = 100;
   y = 50;
   p1 = loadImage("");
   
