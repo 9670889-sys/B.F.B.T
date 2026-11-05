@@ -4,6 +4,7 @@ Player p1;
 Scroller backdrop;
 Item coin;
 Obstacle pipe;
+Obstacle pipe2;
 
 float v;
 
@@ -12,7 +13,8 @@ void setup() {
   p1 = new Player(400, 300, 50, 50, 1);
   backdrop = new Scroller();
   coin = new Item();
-  pipe = new Obstacle(500);
+  pipe = new Obstacle(500, int(random(0, 50)));
+  pipe2 = new Obstacle(500, int(random(250, 300)));
   Buttons[0] = new Button();
   Buttons[1] = new Button();
   Buttons[2] = new Button();
@@ -28,6 +30,8 @@ void draw() {
   Buttons[0].display();
   pipe.display();
   pipe.move();
+  pipe2.display();
+  pipe2.move();
   backdrop.display();
 
 }
