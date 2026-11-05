@@ -4,20 +4,19 @@ class Obstacle {
   int x,y;
   PImage im;
   //constructor
-  Obstacle(int x) {
+  Obstacle(int x, int y) {
     this.x=x;
-    y=int(random(300));
+    this.y=y;
     im=loadImage("Pillar.png");
   }
   //Member Methods
   void display() {
   fill (200, 30, 170);
-  image(im, x ,y);
+  if(x>-70){
+    x= x-3;
+  } else {
+    x=920;
   }
-  void move() {
-    x=x-2;
-    if(x<=-60){
-      x=500;
-    }
+  image(im, x ,y);
   }
 }
