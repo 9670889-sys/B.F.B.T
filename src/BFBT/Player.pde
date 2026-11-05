@@ -20,7 +20,7 @@ class Player {
   // Member Method
   void display() {
     strokeWeight(0);
-    image(p1, x, y, w, y); //recomend w=50, h=50 for gameplay
+    image(p1, x, y, w, h); //recomend w=50, h=50 for gameplay
   
   }
   
