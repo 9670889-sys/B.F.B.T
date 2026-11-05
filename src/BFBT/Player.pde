@@ -8,7 +8,7 @@ class Player {
   Player() {
   x = 100;
   y = 50;
-  p1 = loadImage("");
+  p1 = loadImage("BrawlerBird1.gif");
   
   
   }
@@ -17,7 +17,7 @@ class Player {
   void display() {
     // replace rect with img
     fill(200, 7, 88);
-    rect(x, y, 50, 50);
+    image(p1, x, y);
   
   }
   
