@@ -5,8 +5,8 @@ class Button{
 
 // Constructor
 Button() {
-   x = 50;
-   y = 50;
+   x = 125;
+   y = 125;
 }
 
 //Member Method
