@@ -27,6 +27,7 @@ void draw() {
   p1.display();
   Buttons[0].display();
   pipe.display();
+  pipe.move();
   backdrop.display();
 
 }
