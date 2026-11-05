@@ -12,7 +12,11 @@ Button() {
 
 //Member Method
 void display() {
-   fill(200,0,0);
+   rect(x,y,50,50);
+   text("Button",x+9,y+25);
+}
+void move(){
+     fill(200,0,0);
    if(b){
      x = x+1;
      y = y+1;
@@ -26,7 +30,5 @@ void display() {
        b=true;
      }
    }
-   rect(x,y,50,50);
-   text("Button",x+9,y+25);
 }
 }
