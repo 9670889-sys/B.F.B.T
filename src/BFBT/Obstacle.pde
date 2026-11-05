@@ -4,9 +4,9 @@ class Obstacle {
   int x,y;
   PImage im;
   //constructor
-  Obstacle(int x) {
+  Obstacle(int x, int y) {
     this.x=x;
-    y=int(random(300));
+    this.y=y;
     im=loadImage("Pillar.png");
   }
   //Member Methods
