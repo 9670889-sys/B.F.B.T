@@ -12,6 +12,6 @@ class Obstacle {
   //Member Methods
   void display() {
   fill (200, 30, 170);
-  image(im, x ,y)
+  image(im, x ,y);
   }
 }
