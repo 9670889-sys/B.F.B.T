@@ -12,7 +12,7 @@ void setup() {
   p1 = new Player();
   backdrop = new Scroller();
   coin = new Item();
-  pipe = new Obstacle();
+  pipe = new Obstacle(200, 200);
   Buttons[0] = new Button();
   Buttons[1] = new Button();
   Buttons[2] = new Button();
