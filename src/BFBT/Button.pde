@@ -2,7 +2,7 @@
 class Button{
   // Member Variables
   int x,y;
-  boolean b; 
+  boolean b, visible;
 
 // Constructor
 Button() {
@@ -13,7 +13,10 @@ Button() {
 //Member Method
 void display() {
    rect(x,y,50,50);
+   fill(0);
+   if(visible){
    text("Button",x+9,y+25);
+   }
 }
 void move(){
      fill(200,0,0);
