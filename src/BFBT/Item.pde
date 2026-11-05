@@ -13,7 +13,7 @@ class Item {
     } else {
       x=920;
     }
-    im = loadImage("Coin.png");
+    im = loadImage("Coins.png");
   }
 
   // Member Method
