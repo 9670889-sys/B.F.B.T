@@ -8,6 +8,11 @@ class Item {
   Item() {
   x = 50;
   y = 50;
+    if(x>-70){
+    x= x-3;
+  } else {
+    x=920;
+  }
   im = loadImage("");
   
   
