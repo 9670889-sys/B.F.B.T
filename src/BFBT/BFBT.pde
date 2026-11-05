@@ -9,7 +9,7 @@ float v;
 
 void setup() {
   size(900,500);
-  p1 = new Player();
+  p1 = new Player(400, 300, 50, 50, 1);
   backdrop = new Scroller();
   coin = new Item();
   pipe = new Obstacle(200, 200);
