@@ -27,5 +27,6 @@ void display() {
      }
    }
    rect(x,y,50,50);
+   text("Button",x+9,y+25);
 }
 }
