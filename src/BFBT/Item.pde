@@ -20,10 +20,10 @@ class Item {
   void display() {
     // replace rect with img
     fill(200, 7, 88);
-    image(im, x, y);
+    image(im, x, y, 600, 600);
   }
   void move() {
-     if (x>-70) {
+     if (x>-320) {
       x= x-3;
     } else {
       x=920;
