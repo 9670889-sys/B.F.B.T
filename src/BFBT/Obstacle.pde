@@ -4,15 +4,14 @@ class Obstacle {
   int x,y;
   PImage im;
   //constructor
-  Obstacle() {
-    x=200;
-    y=200;
-    im=loadImage("");
+  Obstacle(int x, int y) {
+    this.x=x;
+    this.y=y;
+    im=loadImage("Pillar.png");
   }
   //Member Methods
   void display() {
   fill (200, 30, 170);
-  rect(x,y,50,50);
-  //replace rect with image
+  image(im, x ,y)
   }
 }
