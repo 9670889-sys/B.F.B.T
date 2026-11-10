@@ -1,4 +1,4 @@
-// Randy Warner
+// Xander Warner
 class Scroller {
   // Member Variables
   float x, y, w, h;
