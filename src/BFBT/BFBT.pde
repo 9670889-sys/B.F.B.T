@@ -23,13 +23,13 @@ void setup() {
 
 void draw() {
   background(128);
+  backdrop.display();
   coin.display();
   p1.display();
   Buttons[0].display();
   pipe.display();
   p1.move();
   pipe.move();
-  backdrop.display();
   Buttons[0].move();
   coin.move();
   backdrop.move();
