@@ -7,14 +7,13 @@ class Scroller {
   Scroller() {
     x = 50;
     y = 100;
-    im = loadImage("");
+    im = loadImage("BFBT-Background.png");
   }
 
   // Member Method
   void display() {
     // replace rect with img
-    fill(200, 7, 88);
-    rect(x, y, 50, 50);
+    image(im, 0, 0);
   }
   void move() {
     if (x>-70) {
