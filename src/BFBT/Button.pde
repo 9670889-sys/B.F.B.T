@@ -1,24 +1,35 @@
 //Logan Funai
 class Button {
   // Member Variables
-  int x, y, clr;
-  boolean b, visible;
+  int x, y, clr, w;
+  boolean b, hover, pressable;
+  String text;
 
   // Constructor
-  Button() {
-    x = 125;
-    y = 125;
+  Button(int x, int y, int w)  {
+    this.x = x; //450
+    this.y = y; //350
+    this.w = w;
+    hover= false;
+    b = true;
   }
 
   //Member Method
-  void display() {
-    fill(clr, 210-clr, clr+45);
-    rect(x, y, 50, 50);
-    fill(0);
-    if (visible) {
-      text("Button", x+9, y+25);
+  void display(boolean pressable,  String text) {
+    if (hover && pressable) {
+      fill(128);
+    } else {
+      fill(clr, 210-clr, clr+45);
     }
+    strokeWeight(4);
+    rect(x, y, 100+w, 100);
+    fill(0);
+    textSize(40);
+    textAlign(CENTER);
+    strokeWeight(2);
+    text(text, x, y+15);
   }
+
   void move() {
     if (b) {
       clr = clr+1;
@@ -31,5 +42,6 @@ class Button {
         b=true;
       }
     }
+    hover = (mouseX < (x+50+(w/2)) && mouseX > x-(50+(w/2)) && mouseY > y-50 && mouseY < y+50);
   }
 }
