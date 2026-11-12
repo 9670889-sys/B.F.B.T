@@ -35,7 +35,7 @@ class Player {
     float deltaTime = ((float)deltaTime())/1000.0;
 
     //change velocity and position and cap speed
-    if (mousePressed) {
+    if (mousePressed && y>0) {
       yvel = -5;
       grav = 0;
     } else {
