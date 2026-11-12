@@ -8,6 +8,7 @@ Obstacle pipe;
 Boolean strt, selection;
 int players;
 PImage start;
+// Ground at 445 y
 void setup() {
   strt = false;
   selection = false;
