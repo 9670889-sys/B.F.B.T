@@ -7,7 +7,7 @@ Obstacle pipe;
 
 Boolean strt, selection;
 int players;
-
+PImage start;
 void setup() {
   strt = false;
   selection = false;
@@ -21,6 +21,7 @@ void setup() {
   Buttons[2] = new Button(250, 240, 0);
   Buttons[3] = new Button(650, 240, 0);
   Buttons[4] = new Button(450, 400, 300);
+  start = loadImage("Start.png");
 }
 
 void mouseReleased() {
@@ -51,7 +52,7 @@ void draw() {
     coin.move();
     backdrop.move();
   } else if (selection == false) {
-    background(50, 170, 50);
+    image(start, 0, 0);
     textSize(80);
     strokeWeight(8);
     text("Birds of a Feather", 450, 70);
