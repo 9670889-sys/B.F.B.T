@@ -7,8 +7,7 @@ Obstacle pipe;
 
 Boolean strt, selection;
 int players;
-PImage start;
-// Ground at 445 y
+
 void setup() {
   strt = false;
   selection = false;
@@ -22,7 +21,6 @@ void setup() {
   Buttons[2] = new Button(250, 240, 0);
   Buttons[3] = new Button(650, 240, 0);
   Buttons[4] = new Button(450, 400, 300);
-  start = loadImage("Start.png");
 }
 
 void mouseReleased() {
@@ -53,7 +51,7 @@ void draw() {
     coin.move();
     backdrop.move();
   } else if (selection == false) {
-    image(start, 0, 0);
+    background(50, 170, 50);
     textSize(80);
     strokeWeight(8);
     text("Birds of a Feather", 450, 70);
@@ -62,7 +60,7 @@ void draw() {
     text("BRAWL TOGETHER", 450, 200);
     strokeWeight(1);
     Buttons[0].display(true, "Start");
-    Buttons[0].move();
+    Buttons[0].pressCheck();
   } else {
     background(225, 120, 30);
     textSize(110);
@@ -77,16 +75,16 @@ void draw() {
     Buttons[3].display(true, "+");
     Buttons[4].display(true, "Start");
     for (int i = 1; i<Buttons.length; i++) {
-      Buttons[i].move();
+      Buttons[i].pressCheck();
     }
   }
 }
 
-  int deltaTime() {
-    int lastFrame;
-    lastFrame = 0;
+int deltaTime() {
+  int lastFrame;
+  lastFrame = 0;
 
-    int delta = millis() - lastFrame;
-    lastFrame = millis();
-    return delta;
-  }
+  int delta = millis() - lastFrame;
+  lastFrame = millis();
+  return delta;
+}
