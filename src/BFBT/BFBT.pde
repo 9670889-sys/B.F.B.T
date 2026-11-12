@@ -24,14 +24,14 @@ void setup() {
 }
 
 void mouseReleased() {
-  if (Buttons[0].hover) {
+  if (Buttons[0].overit) {
     selection=true;
   }
-  if (Buttons[2].hover) {
+  if (Buttons[2].overit) {
     players = players-1;
-  } else if (Buttons[3].hover) {
+  } else if (Buttons[3].overit) {
     players = players+1;
-  } else if (Buttons[4].hover) {
+  } else if (Buttons[4].overit) {
     strt = true;
   }
 }
