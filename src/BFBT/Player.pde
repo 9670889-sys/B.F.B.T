@@ -13,7 +13,8 @@ class Player {
     this.pnum = pnum;
     this.x = x;
     this.y = y;
-    grav = .1;
+    yvel = .5;
+    grav = .04;
     b1 = loadImage("BrawlerBird1.gif");
     b1f = loadImage("BrawlerBird1Flap.gif");
   }
@@ -35,21 +36,25 @@ class Player {
     float deltaTime = ((float)deltaTime())/1000.0;
 
     //change velocity and position and cap speed
-    if (mousePressed && y>0) {
-      yvel = -5;
-      grav = 0;
-    } else {
-      grav = .1;
-      if (yvel > 10) {
-        yvel = 10;
-      } else {
-        yvel += deltaTime*grav;
-      }
+    if (y > height) {
+      y = 0;
     }
+    grav = .04;
+    if (yvel > 2) {
+      yvel = 5;
+    }
+    yvel += deltaTime*grav;
     y += yvel;
   }
-  
+
+  void up() {
+    if (mousePressed) {
+      yvel = -5;
+      grav = 0;
+    }
+  }
+
   //boolean isHit() {
-    
+
   //}
 }
