@@ -7,7 +7,7 @@ class Item {
   // Constructor
   Item() {
     x = 50;
-    y = 50;
+    y = random(200,200);
     w = 600;
     h = 600;
     im = loadImage("Coins.png");
