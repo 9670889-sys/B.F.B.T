@@ -25,7 +25,7 @@ class Player {
       if (yvel < 0) {
         image(b1f, x, y, w, h);
       } else {
-        image(b1, x, y, w, h); //recomend w=50, h=50 for gameplay
+        image(b1, x, y, w, h);
       }
     }
   }
@@ -37,6 +37,7 @@ class Player {
     //change velocity and position and cap speed
     if (mousePressed) {
       yvel = -5;
+      grav = 0;
     } else {
       if (yvel > 10) {
         yvel = 10;
@@ -46,4 +47,8 @@ class Player {
     }
     y += yvel;
   }
+  
+  //boolean isHit() {
+    
+  //}
 }
