@@ -8,25 +8,21 @@ class Item {
   Item() {
     x = 50;
     y = 50;
-    if (x>-70) {
-      x= x-3;
-    } else {
-      x=920;
-    }
+    w = 600;
+    h = 600;
     im = loadImage("Coins.png");
   }
 
-  // Member Method
+  // Member Methods
   void display() {
-    // replace rect with img
-    fill(200, 7, 88);
-    image(im, x, y, 600, 600);
+    image(im, x, y, w, h);
   }
+
   void move() {
-     if (x>-320) {
-      x= x-3;
+    if (x > -w) { 
+      x = x - 3;
     } else {
-      x=920;
+      x = 920;
     }
   }
 }
