@@ -4,7 +4,7 @@ class Player {
   float x, y, w, h;
   float yvel, grav;
   int pnum;
-  PImage p1;
+  PImage b1, b1f;
 
   // Constructor
   Player(float x, float y, float w, float h, int pnum) { //pnum is player number
@@ -13,14 +13,21 @@ class Player {
     this.pnum = pnum;
     this.x = x;
     this.y = y;
-    grav = 1;
-    p1 = loadImage("BrawlerBird1.gif");
+    grav = .1;
+    b1 = loadImage("BrawlerBird1.gif");
+    b1f = loadImage("BrawlerBird1Flap.gif");
   }
 
   // Member Method
   void display() {
     strokeWeight(0);
-    image(p1, x, y, w, h); //recomend w=50, h=50 for gameplay
+    if (pnum == 1) {
+      if (yvel < 0) {
+        image(b1f, x, y, w, h);
+      } else {
+        image(b1, x, y, w, h); //recomend w=50, h=50 for gameplay
+      }
+    }
   }
 
   int deltaTime() {
@@ -37,11 +44,14 @@ class Player {
     float deltaTime = ((float)deltaTime())/1000.0;
 
     //change velocity and position and cap speed
-
-    if (yvel > 10) {
-      yvel = 10;
+    if (mousePressed) {
+      yvel = -5;
     } else {
-      yvel += deltaTime*grav;
+      if (yvel > 10) {
+        yvel = 10;
+      } else {
+        yvel += deltaTime*grav;
+      }
     }
     y += yvel;
   }
