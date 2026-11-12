@@ -39,6 +39,7 @@ class Player {
       yvel = -5;
       grav = 0;
     } else {
+      grav = .1;
       if (yvel > 10) {
         yvel = 10;
       } else {
