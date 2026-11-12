@@ -1,5 +1,5 @@
 //Logan Funai| Birds of a Feather, Brawl Together | 10/27/2026 | Computer Programing 1
-Button[] Buttons = new Button[5];
+Button[] buttons = new Button[5];
 Player p1;
 Scroller backdrop;
 Item coin;
@@ -15,23 +15,23 @@ void setup() {
   p1 = new Player(400, 300, 50, 50, 1);
   backdrop = new Scroller();
   coin = new Item();
-  pipe = new Obstacle(500, int(random(-20,2)));
-  Buttons[0] = new Button(450, 350, 300);
-  Buttons[1] = new Button(450, 240, 150);
-  Buttons[2] = new Button(250, 240, 0);
-  Buttons[3] = new Button(650, 240, 0);
-  Buttons[4] = new Button(450, 400, 300);
+  pipe = new Obstacle(500, 2);
+  buttons[0] = new Button(450, 350, 300);
+  buttons[1] = new Button(450, 240, 150);
+  buttons[2] = new Button(250, 240, 0);
+  buttons[3] = new Button(650, 240, 0);
+  buttons[4] = new Button(450, 400, 300);
 }
 
 void mouseReleased() {
-  if (Buttons[0].overit) {
+  if (buttons[0].overit) {
     selection=true;
   }
-  if (Buttons[2].overit) {
+  if (buttons[2].overit) {
     players = players-1;
-  } else if (Buttons[3].overit) {
+  } else if (buttons[3].overit) {
     players = players+1;
-  } else if (Buttons[4].overit) {
+  } else if (buttons[4].overit) {
     strt = true;
   }
 }
@@ -55,12 +55,12 @@ void draw() {
     textSize(80);
     strokeWeight(8);
     text("Birds of a Feather", 450, 70);
-    fill(Buttons[0].clr+45, Buttons[0].clr, 210-Buttons[0].clr);
+    fill(buttons[0].clr+45, buttons[0].clr, 210-buttons[0].clr);
     textSize(110);
     text("BRAWL TOGETHER", 450, 200);
     strokeWeight(1);
-    Buttons[0].display(true, "Start");
-    Buttons[0].pressCheck();
+    buttons[0].display(true, "Start");
+    buttons[0].pressCheck();
   } else {
     background(225, 120, 30);
     textSize(110);
@@ -70,12 +70,12 @@ void draw() {
     } else if (players>4) {
       players = players-1;
     }
-    Buttons[1].display(false, str(players));
-    Buttons[2].display(true, "-");
-    Buttons[3].display(true, "+");
-    Buttons[4].display(true, "Start");
-    for (int i = 1; i<Buttons.length; i++) {
-      Buttons[i].pressCheck();
+    buttons[1].display(false, str(players));
+    buttons[2].display(true, "-");
+    buttons[3].display(true, "+");
+    buttons[4].display(true, "Start");
+    for (int i = 1; i<buttons.length; i++) {
+      buttons[i].pressCheck();
     }
   }
 }
