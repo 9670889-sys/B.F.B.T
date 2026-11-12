@@ -65,7 +65,7 @@ void draw() {
     background(225, 120, 30);
     textSize(110);
     text("PLAYERS", 450, 100);
-    if (players<0) {
+    if (players<1) {
       players = players+1;
     } else if (players>4) {
       players = players-1;
@@ -79,3 +79,12 @@ void draw() {
     }
   }
 }
+
+  int deltaTime() {
+    int lastFrame;
+    lastFrame = 0;
+
+    int delta = millis() - lastFrame;
+    lastFrame = millis();
+    return delta;
+  }
