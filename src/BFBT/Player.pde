@@ -30,15 +30,6 @@ class Player {
     }
   }
 
-  int deltaTime() {
-    int lastFrame;
-    lastFrame = 0;
-
-    int delta = millis() - lastFrame;
-    lastFrame = millis();
-    return delta;
-  }
-
   void move() {
 
     float deltaTime = ((float)deltaTime())/1000.0;
