@@ -15,7 +15,7 @@ class Obstacle {
   image(im, x ,y);
   }
   void move() {
-    x=x-2;
+    x=x-3;
     if(x<=-60){
       x=500;
     }
