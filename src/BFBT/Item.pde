@@ -5,9 +5,9 @@ class Item {
   PImage im;
 
   // Constructor
-  Item() {
-    x = 50;
-    y = random(200,200);
+  Item(int x) {
+    this.x = x;
+    y = random(450);
     w = 600;
     h = 600;
     im = loadImage("Coins.png");
@@ -19,7 +19,7 @@ class Item {
   }
 
   void move() {
-    if (x > -w) { 
+    if (x > -6000) {
       x = x - 3;
     } else {
       x = 920;
