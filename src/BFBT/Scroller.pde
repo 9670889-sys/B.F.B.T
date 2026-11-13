@@ -4,8 +4,8 @@ class Scroller {
   float x, y, w, h;
   PImage im;
   // Constructor
-  Scroller() {
-    x = 50;
+  Scroller(int x) {
+    this.x = x;
     y = 100;
     im = loadImage("BFBT-Background.png");
   }
@@ -13,13 +13,13 @@ class Scroller {
   // Member Method
   void display() {
     // replace rect with img
-    image(im, 0, 0);
+    image(im, x, 0);
   }
   void move() {
-    if (x>-70) {
+    if (x>-900) {
       x= x-3;
     } else {
-      x=920;
+      x=890;
     }
   }
 }
