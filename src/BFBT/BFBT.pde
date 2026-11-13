@@ -1,6 +1,6 @@
 //Logan Funai| Birds of a Feather, Brawl Together | 10/27/2026 | Computer Programing 1
 Button[] buttons = new Button[5];
-Player p1;
+Player[] birds = new Player[4];
 Scroller backdrop;
 Item coin;
 Obstacle pipe;
@@ -12,7 +12,10 @@ void setup() {
   strt = false;
   selection = false;
   size(900, 500);
-  p1 = new Player(400, 300, 50, 50, 1);
+  birds[0] = new Player(400, 300, 50, 50, 1);
+  birds[1] = new Player(400, 300, 50, 50, 1);
+  birds[2] = new Player(400, 300, 50, 50, 1);
+  birds[3] = new Player(400, 300, 50, 50, 1);
   backdrop = new Scroller();
   coin = new Item();
   pipe = new Obstacle(500, 2);
@@ -24,7 +27,7 @@ void setup() {
 }
 
 void mousePressed() {
-  p1.up();
+  birds[0].up();
 }
 void mouseReleased() {
   if (buttons[0].overit) {
@@ -47,9 +50,9 @@ void draw() {
     background(128);
     backdrop.display();
     coin.display();
-    p1.display();
+    birds[0].display();
     pipe.display();
-    p1.move();
+    birds[0].move();
     pipe.move();
     coin.move();
     backdrop.move();
