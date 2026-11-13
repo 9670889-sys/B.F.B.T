@@ -49,7 +49,6 @@ class Player {
   void up() {
     if (strt) {
       yvel = -3;
-      grav = 5;
     }
   }
 
