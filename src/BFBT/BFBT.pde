@@ -60,28 +60,18 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
-    coin[1].display();
-    coin[1].display();
-    coin[2].display();
-    coin[3].display();
-    coin[4].display();
-    coin[5].display();
-    coin[6].display();
-    coin[7].display();
+    for (int i = 0; i<coin.length; i++) {
+      coin[i].display();
+    }
     birds[0].display();
     pipe.display();
     birds[0].move();
     pipe.move();
     backdrop[0].move();
     backdrop[1].move();
-    coin[0].move();
-    coin[1].move();
-    coin[2].move();
-    coin[3].move();
-    coin[4].move();
-    coin[5].move();
-    coin[6].move();
-    coin[7].move();
+        for (int i = 0; i<coin.length; i++) {
+      coin[i].move();
+        }
   } else if (selection == false) {
     background(50, 170, 50);
     textSize(80);
