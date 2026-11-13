@@ -14,7 +14,7 @@ class Player {
     this.x = x;
     this.y = y;
     yvel = .5;
-    grav = .04;
+    grav = 5;
     b1 = loadImage("BrawlerBird1.gif");
     b1f = loadImage("BrawlerBird1Flap.gif");
   }
@@ -39,8 +39,7 @@ class Player {
     if (y > height) {
       y = 0;
     }
-    grav = .04;
-    if (yvel > 2) {
+    if (yvel > 5) {
       yvel = 5;
     }
     yvel += deltaTime*grav;
@@ -48,9 +47,9 @@ class Player {
   }
 
   void up() {
-    if (mousePressed) {
-      yvel = -5;
-      grav = 0;
+    if (strt) {
+      yvel = -3;
+      grav = 5;
     }
   }
 
