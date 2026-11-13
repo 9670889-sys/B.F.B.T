@@ -23,7 +23,7 @@ class Player {
   // Member Method
   void display() {
     strokeWeight(0);
-    imageMode(CENTER);
+    //imageMode(CENTER);
     //pushMatrix();
     //rotate(theta);
     if (pnum == 1) {
