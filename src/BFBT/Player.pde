@@ -1,7 +1,7 @@
 // Max Oyewole
 class Player {
   // Member Variables
-  float x, y, w, h;
+  float x, y, w, h, theta;
   float yvel, grav;
   int pnum, health;
   PImage b1, b1f;
@@ -23,6 +23,9 @@ class Player {
   // Member Method
   void display() {
     strokeWeight(0);
+    imageMode(CENTER);
+    //pushMatrix();
+    //rotate(theta);
     if (pnum == 1) {
       if (yvel < 0) {
         image(b1f, x, y, w, h);
@@ -30,6 +33,7 @@ class Player {
         image(b1, x, y, w, h);
       }
     }
+    //popMatrix();
   }
 
   void move() {
