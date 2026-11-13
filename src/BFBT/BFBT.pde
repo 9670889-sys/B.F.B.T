@@ -1,14 +1,15 @@
 //Logan Funai| Birds of a Feather, Brawl Together | 10/27/2026 | Computer Programing 1
 Button[] buttons = new Button[5];
 Player[] birds = new Player[4];
-Scroller[] backdrop = new Scroller[4];
-Item coin;
+Scroller[] backdrop = new Scroller[2];
+Item[] coin = new Item[8];
 Obstacle pipe;
 
 Boolean strt, selection;
 int players, lastFrame;
 
 void setup() {
+  noSmooth();
   lastFrame = 0;
   strt = false;
   selection = false;
@@ -19,10 +20,15 @@ void setup() {
   birds[3] = new Player(400, 300, 50, 50, 1);
   backdrop[0] = new Scroller(0);
   backdrop[1] = new Scroller(900);
-  backdrop[2] = new Scroller(1800);
-  backdrop[3] = new Scroller(2400);
-  coin = new Item();
   pipe = new Obstacle(500, 2);
+  coin[0] = new Item(900);
+  coin[1] = new Item(1500);
+  coin[2] = new Item(2100);
+  coin[3] = new Item(2700);
+  coin[4] = new Item(3600);
+  coin[5] = new Item(3900);
+  coin[6] = new Item(4800);
+  coin[7] = new Item(5400);
   buttons[0] = new Button(450, 350, 300);
   buttons[1] = new Button(450, 240, 150);
   buttons[2] = new Button(250, 240, 0);
@@ -54,14 +60,28 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
-    coin.display();
+    coin[1].display();
+    coin[1].display();
+    coin[2].display();
+    coin[3].display();
+    coin[4].display();
+    coin[5].display();
+    coin[6].display();
+    coin[7].display();
     birds[0].display();
     pipe.display();
     birds[0].move();
     pipe.move();
-    coin.move();
     backdrop[0].move();
     backdrop[1].move();
+    coin[0].move();
+    coin[1].move();
+    coin[2].move();
+    coin[3].move();
+    coin[4].move();
+    coin[5].move();
+    coin[6].move();
+    coin[7].move();
   } else if (selection == false) {
     background(50, 170, 50);
     textSize(80);
