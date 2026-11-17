@@ -7,7 +7,7 @@ class Item {
   // Constructor
   Item(int x) {
     this.x = x;
-    y = random(450);
+    y = random(500);
     w = 600;
     h = 600;
     im = loadImage("Coins.png");
