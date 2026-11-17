@@ -22,13 +22,13 @@ void setup() {
   backdrop[1] = new Scroller(900);
   pipe = new Obstacle(500, 2);
   coin[0] = new Item(900);
-  coin[1] = new Item(1500);
-  coin[2] = new Item(2100);
-  coin[3] = new Item(2700);
-  coin[4] = new Item(3600);
-  coin[5] = new Item(3900);
-  coin[6] = new Item(4800);
-  coin[7] = new Item(5400);
+  coin[1] = new Item(950);
+  coin[2] = new Item(1000);
+  coin[3] = new Item(1050);
+  coin[4] = new Item(1100);
+  coin[5] = new Item(1150);
+  coin[6] = new Item(1200);
+  coin[7] = new Item(1250);
   buttons[0] = new Button(450, 350, 300);
   buttons[1] = new Button(450, 240, 150);
   buttons[2] = new Button(250, 240, 0);
@@ -39,6 +39,13 @@ void setup() {
 void mousePressed() {
   birds[0].up();
 }
+
+void keyPressed() {
+  if (keyCode == 32) {
+  birds[0].up();
+  }
+}
+
 void mouseReleased() {
   if (buttons[0].overit) {
     selection=true;
@@ -60,18 +67,16 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
-    for (int i = 0; i<coin.length; i++) {
-      coin[i].display();
-    }
     birds[0].display();
     pipe.display();
     birds[0].move();
     pipe.move();
     backdrop[0].move();
     backdrop[1].move();
-        for (int i = 0; i<coin.length; i++) {
+    for (int i = 0; i<coin.length; i++) {
+      coin[i].display();
       coin[i].move();
-        }
+    }
   } else if (selection == false) {
     background(50, 170, 50);
     textSize(80);
