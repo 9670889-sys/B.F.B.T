@@ -73,14 +73,12 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
-    birds[0].display();
     top[0].display();
     top[1].display();
     top[2].display();
     bottom[0].display();
     bottom[1].display();
     bottom[2].display();
-    birds[0].move();
     top[0].move();
     top[1].move();
     top[2].move();
@@ -92,6 +90,9 @@ void draw() {
     for (int i = 0; i<coin.length; i++) {
       coin[i].display();
       coin[i].move();
+    }  for (int i = 0; i<players; i++) {
+      birds[i].display();
+      birds[i].move();
     }
   } else if (selection == false) {
     background(50, 170, 50);
