@@ -3,8 +3,7 @@ Button[] buttons = new Button[5];
 Player[] birds = new Player[4];
 Scroller[] backdrop = new Scroller[2];
 Item[] coin = new Item[8];
-Obstacle[] top = new Obstacle[3];
-Obstacle[] bottom = new Obstacle[3];
+Obstacle pipe;
 
 Boolean strt, selection;
 int players, lastFrame;
@@ -21,20 +20,15 @@ void setup() {
   birds[3] = new Player(400, 300, 50, 50, 1);
   backdrop[0] = new Scroller(0);
   backdrop[1] = new Scroller(900);
-  top[0] = new Obstacle(250, int(random(0, 30)), true);
-  top[1] = new Obstacle(575, int(random(0, 30)), true);
-  top[2] = new Obstacle(900, int(random(0, 30)), true);
-  bottom[0] = new Obstacle(250, int(random(270, 300)), false);
-  bottom[1] = new Obstacle(575, int(random(270, 300)), false);
-  bottom[2] = new Obstacle(900, int(random(270, 300)), false);
+  pipe = new Obstacle(500, 2);
   coin[0] = new Item(900);
-  coin[1] = new Item(1500);
-  coin[2] = new Item(2100);
-  coin[3] = new Item(2700);
-  coin[4] = new Item(3600);
-  coin[5] = new Item(3900);
-  coin[6] = new Item(4800);
-  coin[7] = new Item(5400);
+  coin[1] = new Item(950);
+  coin[2] = new Item(1000);
+  coin[3] = new Item(1050);
+  coin[4] = new Item(1100);
+  coin[5] = new Item(1150);
+  coin[6] = new Item(1200);
+  coin[7] = new Item(1250);
   buttons[0] = new Button(450, 350, 300);
   buttons[1] = new Button(450, 240, 150);
   buttons[2] = new Button(250, 240, 0);
@@ -73,25 +67,16 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
-    birds[0].display();
-    top[0].display();
-    top[1].display();
-    top[2].display();
-    bottom[0].display();
-    bottom[1].display();
-    bottom[2].display();
-    birds[0].move();
-    top[0].move();
-    top[1].move();
-    top[2].move();
-    bottom[0].move();
-    bottom[1].move();
-    bottom[2].move();
+    pipe.display();
+    pipe.move();
     backdrop[0].move();
     backdrop[1].move();
     for (int i = 0; i<coin.length; i++) {
       coin[i].display();
       coin[i].move();
+    } for (int i = 0; i<players; i++) {
+      birds[i].display();
+      birds[i].move();
     }
   } else if (selection == false) {
     background(50, 170, 50);
