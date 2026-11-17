@@ -18,12 +18,12 @@ class Obstacle {
   }
   void move() {
     x=x-3;
-    if(x<=-60 && top==true){
+    if(x<=-130 && top==true){
       x=900;
-      y=int(random(0,30));
-    } else if(x<=-60 && top==false) {
+      y=int(random(-100,-60));
+    } else if(x<=-130 && top==false) {
       x=900;
-      y=int(random(270, 300));
+      y=int(random(280, 330));
     }
   }
 }
