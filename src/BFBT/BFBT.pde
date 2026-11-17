@@ -24,9 +24,9 @@ void setup() {
   top[0] = new Obstacle(250, int(random(0, 30)), true);
   top[1] = new Obstacle(575, int(random(0, 30)), true);
   top[2] = new Obstacle(900, int(random(0, 30)), true);
-  bottom[0] = new Obstacle(250, int(random(230, 300)), false);
-  bottom[1] = new Obstacle(575, int(random(230, 300)), false);
-  bottom[2] = new Obstacle(900, int(random(230, 300)), false);
+  bottom[0] = new Obstacle(250, int(random(270, 300)), false);
+  bottom[1] = new Obstacle(575, int(random(270, 300)), false);
+  bottom[2] = new Obstacle(900, int(random(270, 300)), false);
   coin[0] = new Item(900);
   coin[1] = new Item(1500);
   coin[2] = new Item(2100);
