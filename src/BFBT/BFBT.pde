@@ -8,6 +8,7 @@ Obstacle[] bottom = new Obstacle[3];
 
 Boolean strt, selection, player1up, player2up, player3up, player4up, p1dies, p2dies, p3dies, p4dies;
 int players, lastFrame, health;
+float ObsDist1, ObsDist2, ObsDist3;
 
 void setup() {
   noSmooth();
@@ -45,6 +46,9 @@ void setup() {
   buttons[2] = new Button(250, 240, 0);
   buttons[3] = new Button(650, 240, 0);
   buttons[4] = new Button(450, 400, 300);
+  ObsDist1=dist(Top[0].x, Top[0].y+300, bottom[0].x, bottom[0].y);
+  ObsDist2=dist(Top[1].x, Top[1].y+300, bottom[1].x, bottom[1].y);
+  ObsDist3=dist(Top[2].x, Top[2].y+300, bottom[2].x, bottom[2].y);
 }
 
 void mousePressed() {
@@ -79,6 +83,24 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
+    ObsDist1=dist(Top[0].x, Top[0].y+300, bottom[0].x, bottom[0].y);
+    ObsDist2=dist(Top[1].x, Top[1].y+300, bottom[1].x, bottom[1].y);
+    ObsDist3=dist(Top[2].x, Top[2].y+300, bottom[2].x, bottom[2].y);
+    if (ObsDist1<=30) {
+      Top[0].y-=10;
+      bottom[0].y+=10;
+    }
+    if (ObsDist2<=30) {
+      Top[1].y-=10;
+      bottom[1].y+=10;
+    }
+    if (ObsDist3<=30) {
+      Top[2].y-=10;
+      bottom[2].y+=10;
+    }
+    println(ObsDist1);
+    println(ObsDist2);
+    println(ObsDist3);
     top[0].display();
     top[1].display();
     top[2].display();
