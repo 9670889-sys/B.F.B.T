@@ -86,17 +86,17 @@ void draw() {
     ObsDist1=dist(top[0].x, top[0].y+300, bottom[0].x, bottom[0].y);
     ObsDist2=dist(top[1].x, top[1].y+300, bottom[1].x, bottom[1].y);
     ObsDist3=dist(top[2].x, top[2].y+300, bottom[2].x, bottom[2].y);
-    if (ObsDist1<=30) {
-      top[0].y-=10;
-      bottom[0].y+=10;
+    if (ObsDist1<=60) {
+      top[0].y-=5;
+      bottom[0].y+=5;
     }
-    if (ObsDist2<=30) {
-      top[1].y-=10;
-      bottom[1].y+=10;
+    if (ObsDist2<=60) {
+      top[1].y-=5;
+      bottom[1].y+=5;
     }
-    if (ObsDist3<=30) {
-      top[2].y-=10;
-      bottom[2].y+=10;
+    if (ObsDist3<=60) {
+      top[2].y-=5;
+      bottom[2].y+=5;
     }
     println(ObsDist1);
     println(ObsDist2);
@@ -171,4 +171,3 @@ int deltaTime() {
   lastFrame = millis();
   return delta;
 }
-
