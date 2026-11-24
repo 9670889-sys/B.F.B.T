@@ -25,10 +25,10 @@ class Button {
     }
     strokeWeight(4);
     rect(x, y, 100+w, 100);
-    image(im, x-50, y-50, 100, 100);
+    image(im, x, y, 100, 100);
     if (w > 161) {
-      image(im, x-150, y-50, 100, 100);
-      image(im, x+50, y-50, 100, 100);
+      image(im, x, y, 100, 100);
+      image(im, x, y, 100, 100);
     }
     fill(0);
     textSize(40);
