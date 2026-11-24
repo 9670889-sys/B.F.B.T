@@ -1,10 +1,11 @@
 // Max Oyewole
+
 class Player {
   // Member Variables
   float x, y, w, h, theta;
   float yvel, grav;
   int pnum, health;
-  PImage b1, b1f,b2,b2f,b3,b3f,b4f;
+  PImage b1, b1f, b2, b2f, b3, b3f, b4f;
 
   // Constructor
   Player(float x, float y, float w, float h, int pnum) { //pnum is player number
@@ -28,7 +29,6 @@ class Player {
   // Member Method
   void display() {
     strokeWeight(0);
-    //imageMode(CENTER);
     //pushMatrix();
     //rotate(theta);
     if (pnum == 1) {
@@ -37,19 +37,19 @@ class Player {
       } else {
         image(b1, x, y, w, h);
       }
-    } else if(pnum == 2) {
+    } else if (pnum == 2) {
       if (yvel < 0) {
         image(b2f, x, y, w, h);
       } else {
         image(b2, x, y, w, h);
       }
-    } else if(pnum == 3) {
+    } else if (pnum == 3) {
       if (yvel < 0) {
         image(b3f, x, y, w, h);
       } else {
         image(b3, x, y, w, h);
       }
-    } else if(pnum == 4) {
+    } else if (pnum == 4) {
       if (yvel < 0) {
         image(b4f, x, y, w, h);
       } else {
@@ -64,14 +64,10 @@ class Player {
     float deltaTime = ((float)deltaTime())/1000.0;
 
     //change velocity and position and cap speed
-    if (y > height-32) {
-      //health = 0;
-      y = 0;
-      //y = height-32;
-      //yvel = 0;
-    }
     if (yvel > 5) {
       yvel = 5;
+    } else if (y >= height - h/2) {
+      y = height - h/2;
     }
     yvel += deltaTime*grav;
     y += yvel;
@@ -83,11 +79,12 @@ class Player {
     }
   }
 
-  //boolean isHit() {
-  //  if (// make check for obstacle) {
-  //    return true;
-  //  } else {
-  //  }
-  //  return false;
-  //}
+  boolean isHit(Obstacle o) {
+    if (abs(x - o.x) == w/2 + o.w/2 || abs(y - o.y) == h/2 + o.h/2 || y >= height - h/2) {
+      health = 0;
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
