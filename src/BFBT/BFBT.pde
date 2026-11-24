@@ -16,9 +16,9 @@ void setup() {
   selection = false;
   size(900, 500);
   birds[0] = new Player(400, 300, 50, 50, 1);
-  birds[1] = new Player(400, 300, 50, 50, 1);
-  birds[2] = new Player(400, 300, 50, 50, 1);
-  birds[3] = new Player(400, 300, 50, 50, 1);
+  birds[1] = new Player(400, 300, 50, 50, 2);
+  birds[2] = new Player(400, 300, 50, 50, 3);
+  birds[3] = new Player(400, 300, 50, 50, 4);
   backdrop[0] = new Scroller(0);
   backdrop[1] = new Scroller(900);
   top[0] = new Obstacle(250, int(random(-100, -60)), true);
