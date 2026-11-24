@@ -2,7 +2,7 @@
 Button[] buttons = new Button[5];
 Player[] birds = new Player[4];
 Scroller[] backdrop = new Scroller[2];
-Item[] coin = new Item[8];
+Item[] coin = new Item[4];
 Obstacle[] top = new Obstacle[3];
 Obstacle[] bottom = new Obstacle[3];
 
@@ -37,10 +37,6 @@ void setup() {
   coin[1] = new Item(1500);
   coin[2] = new Item(2100);
   coin[3] = new Item(2700);
-  coin[4] = new Item(3600);
-  coin[5] = new Item(3900);
-  coin[6] = new Item(4800);
-  coin[7] = new Item(5400);
   buttons[0] = new Button(450, 350, 300);
   buttons[1] = new Button(450, 240, 150);
   buttons[2] = new Button(250, 240, 0);
