@@ -4,7 +4,7 @@ class Player {
   float x, y, w, h, theta;
   float yvel, grav;
   int pnum, health;
-  PImage b1, b1f;
+  PImage b1, b1f,b2,b2f,b3,b3f,b4;
 
   // Constructor
   Player(float x, float y, float w, float h, int pnum) { //pnum is player number
@@ -18,6 +18,11 @@ class Player {
     health = 1;
     b1 = loadImage("BrawlerBird1.gif");
     b1f = loadImage("BrawlerBird1Flap.gif");
+    b2 = loadImage("BrawlerBird2.png");
+    b2f = loadImage("BrawlerBird2.png");
+    b3 = loadImage("BrawlerBird2.png");
+    b3f = loadImage("BrawlerBird2.png");
+    b4 = loadImage("BrawlerBird4Flap.png");
   }
 
   // Member Method
@@ -31,6 +36,24 @@ class Player {
         image(b1f, x, y, w, h);
       } else {
         image(b1, x, y, w, h);
+      }
+    } else if(pnum == 2) {
+      if (yvel < 0) {
+        image(b2f, x, y, w, h);
+      } else {
+        image(b2, x, y, w, h);
+      }
+    } else if(pnum == 3) {
+      if (yvel < 0) {
+        image(b3f, x, y, w, h);
+      } else {
+        image(b3, x, y, w, h);
+      }
+    } else if(pnum == 4) {
+      if (yvel < 0) {
+        image(b4, x, y, w, h);
+      } else {
+        image(b4, x, y, w, h);
       }
     }
     //popMatrix();
