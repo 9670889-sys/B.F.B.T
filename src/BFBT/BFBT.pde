@@ -79,24 +79,56 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
-    ObsDist1=dist(top[0].x, top[0].y+300, bottom[0].x, bottom[0].y);
+   ObsDist1=dist(top[0].x, top[0].y+300, bottom[0].x, bottom[0].y);
     ObsDist2=dist(top[1].x, top[1].y+300, bottom[1].x, bottom[1].y);
     ObsDist3=dist(top[2].x, top[2].y+300, bottom[2].x, bottom[2].y);
     if (ObsDist1<=60) {
       top[0].y-=5;
       bottom[0].y+=5;
-    }
-    if (ObsDist2<=60) {
-      top[1].y-=5;
-      bottom[1].y+=5;
-    }
-    if (ObsDist3<=60) {
-      top[2].y-=5;
-      bottom[2].y+=5;
-    }
-    println(ObsDist1);
-    println(ObsDist2);
-    println(ObsDist3);
+      if (ObsDist2>=80) {
+        top[1].y+=5;
+        bottom[1].y-=5;
+      }
+    } else if (ObsDist1>=80) {
+      top[0].y+=5;
+      bottom[0].y-=5;
+      if (ObsDist1<=60) {
+        top[2].y-=5;
+        bottom[2].y+=5;
+      }
+    } if (ObsDist2<=60) {
+        top[1].y-=5;
+        bottom[1].y+=5;
+        if (ObsDist2>=80) {
+          top[1].y+=5;
+          bottom[1].y-=5;
+        }
+      } else if (ObsDist2>=80) {
+        top[1].y+=5;
+        bottom[1].y-=5;
+        if (ObsDist2<=60) {
+          top[2].y-=5;
+          bottom[2].y+=5;
+        }
+      }
+      if (ObsDist3<=60) {
+        top[2].y-=5;
+        bottom[2].y+=5;
+        if (ObsDist3>=80) {
+          top[2].y+=5;
+          bottom[2].y-=5;
+        }
+      } else if (ObsDist3>=80) {
+        top[2].y+=5;
+        bottom[2].y-=5;
+        if (ObsDist3<=60) {
+          top[2].y-=5;
+          bottom[2].y+=5;
+        }
+      }
+        println(ObsDist1);
+        println(ObsDist2);
+        println(ObsDist3);
     top[0].display();
     top[1].display();
     top[2].display();
