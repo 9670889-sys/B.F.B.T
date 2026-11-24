@@ -6,11 +6,16 @@ Item[] coin = new Item[8];
 Obstacle[] top = new Obstacle[3];
 Obstacle[] bottom = new Obstacle[3];
 
-Boolean strt, selection;
-int players, lastFrame;
+Boolean strt, selection, player1up, player2up, player3up, player4up, p1dies, p2dies, p3dies, p4dies;
+int players, lastFrame, health;
 
 void setup() {
   noSmooth();
+  health = 1;
+  player1up = false;
+  player2up = false;
+  player3up = false;
+  player4up = false;
   lastFrame = 0;
   strt = false;
   selection = false;
@@ -48,7 +53,7 @@ void mousePressed() {
 
 void keyPressed() {
   if (keyCode == 32) {
-  birds[0].up();
+    birds[0].up();
   }
 }
 
@@ -62,6 +67,7 @@ void mouseReleased() {
     players = players+1;
   } else if (buttons[4].overit) {
     strt = true;
+    player1up= true;
   }
 }
 
@@ -90,9 +96,22 @@ void draw() {
     for (int i = 0; i<coin.length; i++) {
       coin[i].display();
       coin[i].move();
-    }  for (int i = 0; i<players; i++) {
-      birds[i].display();
-      birds[i].move();
+    }
+    if (player1up) {
+      birds[0].move();
+      birds[0].display();
+    }
+    if (player2up) {
+      birds[1].move();
+      birds[1].display();
+    }
+    if (player3up) {
+      birds[2].move();
+      birds[2].display();
+    }
+    if (player4up) {
+      birds[3].move();
+      birds[3].display();
     }
   } else if (selection == false) {
     background(50, 170, 50);
@@ -130,3 +149,4 @@ int deltaTime() {
   lastFrame = millis();
   return delta;
 }
+
