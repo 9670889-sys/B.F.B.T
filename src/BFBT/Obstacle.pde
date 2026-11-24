@@ -1,29 +1,29 @@
-// Xavier Probasco
-class Obstacle {
-  //Member Variables
-  int x,y;
-  boolean top;
+// Xander Warner
+class Item {
+  // Member Variables
+  float x, y, w, h;
   PImage im;
-  //constructor
-  Obstacle(int x, int y, boolean top) {
-    this.x=x;
-    this.y=y;
-    this.top=top;
-    im=loadImage("Pillar.png");
+
+  // Constructor
+  Item(int x) {
+    this.x = x;
+    y = random(50, 300);
+    w = 600;
+    h = 600;
+    im = loadImage("Coins.png");
   }
-  //Member Methods
+
+  // Member Methods
   void display() {
-  fill (200, 30, 170);
-  image(im, x ,y);
+    //println(x);
+    image(im, x, y, w, h);
   }
+
   void move() {
-    x=x-3;
-    if(x<=-130 && top==true){
-      x=900;
-      y=int(random(-250,50));
-    } else if(x<=-130 && top==false) {
-      x=900;
-      y=int(random(200, 330));
+    if (x > -6000) {
+      x = x - 3;
+    } else {
+      x = 920;
     }
   }
 }
