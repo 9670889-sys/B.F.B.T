@@ -20,10 +20,10 @@ class Obstacle {
     x=x-3;
     if(x<=-130 && top==true){
       x=900;
-      y=int(random(-100,-60));
+      y=int(random(-250,50));
     } else if(x<=-130 && top==false) {
       x=900;
-      y=int(random(280, 330));
+      y=int(random(200, 330));
     }
   }
 }
