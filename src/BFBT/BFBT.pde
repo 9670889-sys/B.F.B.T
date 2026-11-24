@@ -46,9 +46,9 @@ void setup() {
   buttons[2] = new Button(250, 240, 0);
   buttons[3] = new Button(650, 240, 0);
   buttons[4] = new Button(450, 400, 300);
-  ObsDist1=dist(Top[0].x, Top[0].y+300, bottom[0].x, bottom[0].y);
-  ObsDist2=dist(Top[1].x, Top[1].y+300, bottom[1].x, bottom[1].y);
-  ObsDist3=dist(Top[2].x, Top[2].y+300, bottom[2].x, bottom[2].y);
+  ObsDist1=dist(top[0].x, top[0].y+300, bottom[0].x, bottom[0].y);
+  ObsDist2=dist(top[1].x, top[1].y+300, bottom[1].x, bottom[1].y);
+  ObsDist3=dist(top[2].x, top[2].y+300, bottom[2].x, bottom[2].y);
 }
 
 void mousePressed() {
@@ -83,19 +83,19 @@ void draw() {
     background(128);
     backdrop[0].display();
     backdrop[1].display();
-    ObsDist1=dist(Top[0].x, Top[0].y+300, bottom[0].x, bottom[0].y);
-    ObsDist2=dist(Top[1].x, Top[1].y+300, bottom[1].x, bottom[1].y);
-    ObsDist3=dist(Top[2].x, Top[2].y+300, bottom[2].x, bottom[2].y);
+    ObsDist1=dist(top[0].x, top[0].y+300, bottom[0].x, bottom[0].y);
+    ObsDist2=dist(top[1].x, top[1].y+300, bottom[1].x, bottom[1].y);
+    ObsDist3=dist(top[2].x, top[2].y+300, bottom[2].x, bottom[2].y);
     if (ObsDist1<=30) {
-      Top[0].y-=10;
+      top[0].y-=10;
       bottom[0].y+=10;
     }
     if (ObsDist2<=30) {
-      Top[1].y-=10;
+      top[1].y-=10;
       bottom[1].y+=10;
     }
     if (ObsDist3<=30) {
-      Top[2].y-=10;
+      top[2].y-=10;
       bottom[2].y+=10;
     }
     println(ObsDist1);
