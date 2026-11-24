@@ -7,14 +7,13 @@ class Item {
   // Constructor
   Item(int x) {
     this.x = x;
-    y = random(500);
+    y = random(100, 400);
     w = 600;
     h = 600;
     im = loadImage("Coins.png");
   }
 
   // Member Methods
-    imageMode(CENTER);
   void display() {
     image(im, x, y, w, h);
   }
