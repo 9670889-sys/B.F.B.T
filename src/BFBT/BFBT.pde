@@ -35,7 +35,7 @@ void setup() {
   bottom[2] = new Obstacle(900, int(random(280, 330)), false);
   coin[0] = new Item(900);
   coin[1] = new Item(1500);
-  coin[2] = new Item(2100);
+  coin[2] = new Item(1900);
   coin[3] = new Item(2700);
   buttons[0] = new Button(450, 350, 300);
   buttons[1] = new Button(450, 240, 150);
