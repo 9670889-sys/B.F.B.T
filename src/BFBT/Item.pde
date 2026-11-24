@@ -14,6 +14,7 @@ class Item {
   }
 
   // Member Methods
+    imageMode(CENTER);
   void display() {
     image(im, x, y, w, h);
   }
