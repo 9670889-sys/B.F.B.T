@@ -131,6 +131,10 @@ void draw() {
       birds[3].move();
       birds[3].display();
     }
+    fill(40,200,0);
+    strokeWeight(0);
+    rect(0, 490, 5000, 20);
+    strokeWeight(1);
   } else if (selection == false) {
     background(50, 170, 50);
     textSize(80);
