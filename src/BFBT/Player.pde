@@ -2,9 +2,9 @@
 
 class Player {
   // Member Variables
-  float x, y, w, h, theta;
+  float x, y, w, h;
   float yvel, grav;
-  int pnum, health;
+  int pnum, health flapTime;
   PImage b1, b1f, b2, b2f, b3, b3f, b4f;
 
   // Constructor
@@ -17,6 +17,7 @@ class Player {
     yvel = .5;
     grav = 5;
     health = 1;
+    flapTime = 0;
     b1 = loadImage("BrawlerBird1.gif");
     b1f = loadImage("BrawlerBird1Flap.gif");
     b2 = loadImage("BrawlerBird2.gif");
@@ -30,7 +31,6 @@ class Player {
   void display() {
     strokeWeight(0);
     //pushMatrix();
-    //rotate(theta);
     if (pnum == 1) {
       if (yvel < 0) {
         image(b1f, x, y, w, h);
