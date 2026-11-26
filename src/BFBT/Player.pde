@@ -4,7 +4,7 @@ class Player {
   // Member Variables
   float x, y, w, h;
   float yvel, grav;
-  int pnum, health flapTime;
+  int pnum, health;
   PImage b1, b1f, b2, b2f, b3, b3f, b4f;
 
   // Constructor
@@ -17,7 +17,7 @@ class Player {
     yvel = .5;
     grav = 5;
     health = 1;
-    flapTime = 0;
+    score = 0;
     b1 = loadImage("BrawlerBird1.gif");
     b1f = loadImage("BrawlerBird1Flap.gif");
     b2 = loadImage("BrawlerBird2.gif");
@@ -85,6 +85,15 @@ class Player {
       return true;
     } else {
       return false;
+    }
+  }
+
+  //Can you test and call this function in main please? Leave comments here please.
+
+  int scoreUp(int px, int py, int cx, int cy, int ps) {
+    if(dist(px, py, cx, cy)) {
+      ps +=1;
+      return ps;
     }
   }
 }
